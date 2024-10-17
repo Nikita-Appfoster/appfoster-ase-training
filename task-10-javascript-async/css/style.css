@@ -1,0 +1,68 @@
+
+*{
+    margin:0;
+    padding:0;
+    
+   
+}
+.name-element,.fa-solid.fa-eye-slash{
+    color:blue
+}
+.myclass{
+    border:1px solid black;
+    margin:30px;
+}
+
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-table th, .user-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+   
+}
+
+
+.user-table th:first-child, .user-table td:first-child {
+    border-right: 2px solid #000; 
+}
+
+.user-table th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.user-table td {
+    text-align: center;
+}
+
+
+.user-table i {
+    cursor: pointer;
+    font-size: 18px;
+}
+.modal-header {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    position: relative; 
+    padding-right: 40px; 
+   
+    
+
+}
+
+.modal-header .btn.close {
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+    background: transparent;
+    border: none;
+    font-size: 24px;
+   
+}
+
+
