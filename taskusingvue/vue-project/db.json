@@ -1,0 +1,84 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "abc@123"
+    },
+    {
+      "id": "2",
+      "name": "Joh",
+      "email": "joh@example.com",
+      "password": "ab@123"
+    },
+    {
+      "id": "3cc1",
+      "email": "sahn3254@gmail.com",
+      "password": "dfjkbf",
+      "name": "nikita"
+    },
+    {
+      "id": "1982",
+      "email": "",
+      "password": "",
+      "name": ""
+    },
+    {
+      "id": "0ff3",
+      "email": "sahn3254@gmail.com",
+      "password": "dfvhdsknm",
+      "name": "nikita"
+    },
+    {
+      "id": "3885",
+      "email": "",
+      "password": "",
+      "name": ""
+    },
+    {
+      "id": "c889",
+      "email": "sahn6255@gmail.com",
+      "password": "sdhio",
+      "name": "nikita"
+    },
+    {
+      "id": "7922",
+      "email": "any@gamil.com",
+      "password": "567",
+      "name": "ananymous"
+    },
+    {
+      "id": "32c5",
+      "email": "any@gamil.com",
+      "password": "drtfghj",
+      "name": "nikita"
+    },
+    {
+      "id": "6af3",
+      "email": "any@gamil.com",
+      "password": "fgh",
+      "name": "Nikita Sah"
+    },
+    {
+      "id": "602e",
+      "email": "",
+      "password": "",
+      "name": ""
+    },
+    {
+      "id": "de1d",
+      "email": "ananymous@gmail.com",
+      "password": "123",
+      "name": "nikita"
+    }
+  ],
+  "restaurant": [
+    {
+      "name": "new",
+      "address": "delhi",
+      "contact": "9870765467",
+      "id": "e014"
+    }
+  ]
+}
