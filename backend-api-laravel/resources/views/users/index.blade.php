@@ -34,8 +34,7 @@
                     <tbody>
                         @foreach ($users as $user)
                         <tr>
-                            <th scope="row">{{ $loop->iteration}}</th>
-                            
+                            <th scope="row">{{ $user->id }}</th>
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->username }}</td>
                             <td>
@@ -55,7 +54,7 @@
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <h6>ID: {{ $loop->iteration}}</h6>
+                                                    <h6>ID: {{ $user->id }}</h6>
                                                     <h6>Name: {{ $user->name }}</h6>
                                                     <h6>Username: {{ $user->username }}</h6>
                                                     <h6>Email: {{ $user->email }}</h6>
@@ -90,27 +89,27 @@
                                                     @method('PUT')
                                                     <div class="form-group">
                                                         <label for="name">Name</label>
-                                                        <input type="text" class="form-control" id="name" name="name" value="{{ $user->name }}" required>
+                                                        <input type="text" class="form-control" id="name" name="name" value="{{ $user->name }}">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="username">Username</label>
-                                                        <input type="text" class="form-control" id="username" name="username" value="{{ $user->username }}" required>
+                                                        <input type="text" class="form-control" id="username" name="username" value="{{ $user->username }}">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="email">Email</label>
-                                                        <input type="email" class="form-control" id="email" name="email" value="{{ $user->email }}" required>
+                                                        <input type="email" class="form-control" id="email" name="email" value="{{ $user->email }}">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="phone">Phone No.</label>
-                                                        <input type="text" class="form-control" id="phone" name="phone" value="{{ $user->phone }}" required>
+                                                        <input type="text" class="form-control" id="phone" name="phone" value="{{ $user->phone }}">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="website">Website</label>
-                                                        <input type="text" class="form-control" id="website" name="website" value="{{ $user->website }}" required>
+                                                        <input type="text" class="form-control" id="website" name="website" value="{{ $user->website }}">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="company_name">Company Name</label>
-                                                        <input type="text" class="form-control" id="company_name" name="company_name" value="{{ $user->company_name }}" required>
+                                                        <input type="text" class="form-control" id="company_name" name="company_name" value="{{ $user->company_name }}">
                                                     </div>
                                                     <button type="submit" class="btn btn-primary">Update</button>
                                                 </form>
@@ -119,34 +118,11 @@
                                     </div>
                                 </div>
                                 <a href="{{route('projectlist', $user->id)}}" class="btn btn-primary btn-sm active mr-1 btn-l" role="button" aria-pressed="true">Project</a>
-
-                                <button type="button" class="btn btn-danger btn-l" data-toggle="modal" data-target="#deleteModal-{{ $user->id }}">
-                                    Delete
-                                </button>
-                               
-                                <div class="modal fade" id="deleteModal-{{ $user->id }}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel-{{ $user->id }}" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="deleteModalLabel-{{ $user->id }}">Confirm Deletion</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                Are you sure you want to delete ?
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                                <form action="{{ route('users.destroy', $user->id) }}" method="POST" id="deleteForm-{{ $user->id }}">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger">Delete</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <form action="{{ route('users.destroy', $user->id) }}" method="POST">
+                                  @csrf
+                                  @method('DELETE')
+                                  <button type="submit" class="btn btn-danger btn-l">Delete</button>
+                                </form>
                                  
                                 </div>
                             </td>
@@ -162,4 +138,4 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
-</html> 
+</html>

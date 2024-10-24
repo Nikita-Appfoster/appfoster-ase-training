@@ -66,86 +66,73 @@ if(result.status==201){
 .form-title {
   text-align: center;
   margin: 20px 0;
-  font-size: 28px; /* Larger font size for title */
+  font-size: 28px; 
   font-weight: bold;
   color: #333;
 }
 
 .restaurant-form {
-  max-width: 600px; /* Increased width for better visual balance */
+  max-width: 600px; 
   margin: 0 auto;
-  padding: 30px; /* More padding for a spacious feel */
+  padding: 30px; 
   background-color: #ffffff;
-  border-radius: 12px; /* Smoother border radius */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow for a modern look */
-  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); 
+  transition: all 0.3s ease-in-out; 
 }
 
 .restaurant-form:hover {
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Slightly larger shadow on hover */
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
 }
 
 .form-label {
   font-weight: bold;
-  font-size: 16px; /* Larger font size for labels */
+  font-size: 16px; 
   color: #333;
 }
 
 .form-control {
-  font-size: 16px; /* Uniform font size for inputs */
+  font-size: 16px; 
   padding: 10px;
-  border-radius: 8px; /* Rounded corners for inputs */
+  border-radius: 8px; 
   border: 1px solid #ced4da;
-  box-shadow: none; /* Remove default input shadows */
-  transition: all 0.2s ease-in-out; /* Smooth transition for input focus */
+  box-shadow: none; 
+  transition: all 0.2s ease-in-out;
 }
 
 .form-control:focus {
-  border-color: #007bff; /* Blue border on focus */
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Focused input shadow */
+  border-color: #007bff; 
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); 
 }
 
 .btn-primary {
   background-color: #007bff;
   border-color: #007bff;
   padding: 10px 20px;
-  font-size: 18px; /* Larger button text */
+  font-size: 18px;
   border-radius: 8px;
-  width: 100%; /* Full-width button */
+  width: 100%; 
   transition: all 0.2s ease-in-out;
 }
 
 .btn-primary:hover {
   background-color: #0056b3;
   border-color: #004085;
-  transform: translateY(-2px); /* Slight lift on hover */
+  transform: translateY(-2px);
 }
 
 .mb-4 {
   margin-bottom: 1.5rem;
 }
 
-/* Additional space between elements */
+
 .welcome-message {
-  font-size: 22px; /* Consistent font size */
+  font-size: 22px; 
   text-align: center;
   color: #333;
   margin-bottom: 30px;
 }
 
-/* Media query for responsive adjustments */
-@media (max-width: 768px) {
-  .restaurant-form {
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
 
-  .form-title {
-    font-size: 24px;
-  }
 
-  .btn-primary {
-    font-size: 16px;
-  }
-}
 </style>

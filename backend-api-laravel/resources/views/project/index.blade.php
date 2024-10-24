@@ -25,23 +25,21 @@
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">User ID</th>
-                            <th scope="col">Title</th>
                             <th scope="col">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($projects as $project)
                         <tr>
-                            <th scope="row">{{ $loop->iteration}}</th>
+                            <th scope="row">{{$project->id}}</th>
                             <td>{{$project->user_id}}</td>
-                            <td>{{$project->title}}</td>
                             <td>
-                               
+                                <!-- View Button -->
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-{{ $project->id }}">
                                     View
                                 </button>
                                 
-                               
+                                <!-- View Modal -->
                                 <div class="modal fade" id="modal-{{ $project->id }}" tabindex="-1" role="dialog" aria-labelledby="modalLabel-{{ $project->id }}" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
@@ -52,8 +50,8 @@
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                <p><strong>User ID:</strong>{{ $project->user_id }}</p>
-                                                <p><strong>ID:</strong>{{ $loop->iteration}}</p>
+                                                <p><strong>User ID:</strong> {{ $project->user_id }}</p>
+                                                <p><strong>ID:</strong> {{ $project->id }}</p>
                                                 <p><strong>Title:</strong> {{ $project->title }}</p>
                                                 <p><strong>Project Description:</strong> {{ $project->body }}</p>
                                             </div>
@@ -65,11 +63,11 @@
                                     </div>
                                 </div>
 
-                            
+                                <!-- Edit Button -->
                                 <button type="button" class="btn btn-secondary ml-1 mr-1" data-toggle="modal" data-target="#editModal-{{ $project->id }}">
                                     Edit
                                 </button>
-                                
+                                <!-- Edit Modal -->
                                 <div class="modal fade" id="editModal-{{ $project->id }}" tabindex="-1" role="dialog" aria-labelledby="editModalLabel-{{ $project->id }}" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
@@ -113,7 +111,7 @@
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                Are you sure you want to delete this project?
+                                                Are you sure you want to delete this project? This action cannot be undone.
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -145,7 +143,6 @@
         </div>
     </div>
 
-    
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
